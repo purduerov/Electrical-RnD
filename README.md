@@ -16,6 +16,8 @@ To create a new project:
 3. Create a folder for your project
 	This helps keep the repo clean, please do it
 	Give the folder the same name as the branch (Not required but it makes things simpler)
+	`mkdir FOLDERNAME`
+	`cd FOLDERNAME`
 
 4. Work on your project
 	Keep all of your files inside the project folder
