@@ -236,13 +236,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <library name="Panel Mounts Connectors">
 <packages>
 <package name="BINDER_M12_PAR_8_DIP">
-<pad name="1" x="-1.5" y="-2.31" drill="0.85" diameter="1.5"/>
-<pad name="2" x="1.5" y="-2.31" drill="0.85" diameter="1.5"/>
-<pad name="3" x="2.75" y="-0.38" drill="0.85" diameter="1.5"/>
-<pad name="4" x="2.08" y="1.81" drill="0.85" diameter="1.5"/>
+<pad name="2" x="-1.5" y="-2.31" drill="0.85" diameter="1.5"/>
+<pad name="1" x="1.5" y="-2.31" drill="0.85" diameter="1.5"/>
+<pad name="7" x="2.75" y="-0.38" drill="0.85" diameter="1.5"/>
+<pad name="6" x="2.08" y="1.81" drill="0.85" diameter="1.5"/>
 <pad name="5" x="0" y="2.75" drill="0.85" diameter="1.5"/>
-<pad name="6" x="-2.08" y="1.81" drill="0.85" diameter="1.5"/>
-<pad name="7" x="-2.75" y="-0.38" drill="0.85" diameter="1.5"/>
+<pad name="4" x="-2.08" y="1.81" drill="0.85" diameter="1.5"/>
+<pad name="3" x="-2.75" y="-0.38" drill="0.85" diameter="1.5"/>
 <pad name="8" x="0" y="0" drill="0.85" diameter="1.5"/>
 <wire x1="-4" y1="1.5" x2="-1.5" y2="4" width="0.127" layer="40"/>
 <wire x1="-1.5" y1="4" x2="1.5" y2="4" width="0.127" layer="40"/>
