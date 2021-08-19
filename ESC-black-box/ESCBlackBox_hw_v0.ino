@@ -12,6 +12,7 @@
 #define PIN_LED (7)  // ESC LED override (uses I2C)
 #define PIN_TLM (1)  // ESC telemetry
 #define PIN_PWM (9)
+#define EXTRA_5V (2)
 
 #define ESC_MIN (1000)
 #define ESC_MAX (2000)
@@ -19,20 +20,24 @@
 
 ESC esc (PIN_PWM, ESC_MIN, ESC_MAX, ESC_ARM);
 
-int potVal = 0;  //10-bit ADC => value ranges from 0 to 1023
-double escSetpoint = 0; //[us]
+int potVal = 0;  // 10-bit ADC => value ranges from 0 to 1023
+double escSetpoint = 0; // [us]
 
 void setup(void) {
     Serial.begin(9600);
+    pinMode(EXTRA_5V, OUTPUT);
+    digitalWrite(EXTRA_5V, HIGH);
     esc.arm();
     delay(1000);
 }
 
 void loop(void) {
     potVal = analogRead(PIN_POT);
-    //Serial.println(potVal);
+    // Serial.println(potVal);
 
-    escSetpoint = map(potVal, 0, 1023, ESC_MIN,ESC_MAX);  // Basically just linear interpolation?
+    escSetpoint = map(potVal, 0, 1023, ESC_MIN, ESC_MAX);  // Basically just linear interpolation?
+    Serial.print(potVal);
+    Serial.print("\t");
     Serial.println(escSetpoint);
     esc.speed(escSetpoint);
     delay(15);
